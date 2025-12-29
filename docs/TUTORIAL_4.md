@@ -83,7 +83,7 @@ export function SignMessageScreen({ onBack }: { onBack: () => void }) {
       const signResult = await signMessage(message, {
         redirectUrl: 'keyless://callback',
         onSuccess: (res) => {
-          console.log('✅ Message signed successfully');
+          console.log('✓ Message signed successfully');
           setResult({
             signature: res.signature,
             signedPayload: res.signedPayload,
@@ -91,7 +91,7 @@ export function SignMessageScreen({ onBack }: { onBack: () => void }) {
           });
         },
         onFail: (error) => {
-          console.error('❌ Message signing failed:', error);
+          console.error('✗ Message signing failed:', error);
           Alert.alert('Signing Failed', error.message || 'Unknown error');
         },
       });
@@ -187,7 +187,7 @@ export function SignMessageScreen({ onBack }: { onBack: () => void }) {
         // Results Screen
         <View style={styles.content}>
           <View style={styles.successCard}>
-            <Text style={styles.successTitle}>✅ Message Signed Successfully!</Text>
+            <Text style={styles.successTitle}>✓ Message Signed Successfully!</Text>
             <Text style={styles.successText}>
               Your message has been cryptographically signed with your passkey.
             </Text>

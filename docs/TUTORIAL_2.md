@@ -17,15 +17,15 @@ In this tutorial, you'll add:
 ## The Magic of Gasless Transactions
 
 **Traditional crypto apps:**
-- ❌ Users need cryptocurrency just to pay transaction fees
-- ❌ New users can't do anything until they buy crypto first
-- ❌ Every transaction costs money (like paying a stamp for each email)
+- ✗ Users need cryptocurrency just to pay transaction fees
+- ✗ New users can't do anything until they buy crypto first
+- ✗ Every transaction costs money (like paying a stamp for each email)
 
 **Your wallet with Lazorkit:**
-- ✅ **All transactions are free** for your users
-- ✅ **New users can start immediately** - no crypto needed
-- ✅ **Lazorkit pays all fees** behind the scenes
-- ✅ **Users just focus on using your app**
+- ✓ **All transactions are free** for your users
+- ✓ **New users can start immediately** - no crypto needed
+- ✓ **Lazorkit pays all fees** behind the scenes
+- ✓ **Users just focus on using your app**
 
 ## Part 1: Checking Wallet Balance
 
@@ -287,10 +287,10 @@ function SendScreen({ balance }: { balance: number }) {
 ### Why QR Codes?
 
 **QR codes make receiving money easy:**
-- ✅ **No typing long addresses** - just scan and send
-- ✅ **Reduces errors** - no chance of typos in addresses
-- ✅ **Works with any wallet** - standard format
-- ✅ **Quick and convenient** - like Venmo or Cash App
+- ✓ **No typing long addresses** - just scan and send
+- ✓ **Reduces errors** - no chance of typos in addresses
+- ✓ **Works with any wallet** - standard format
+- ✓ **Quick and convenient** - like Venmo or Cash App
 
 ### Creating the Receive Screen
 
@@ -682,8 +682,8 @@ function WalletScreen() {
 ### What Makes This Special
 
 **Compared to traditional wallets:**
-- ❌ **Traditional:** Download MetaMask → Create seed phrase → Buy ETH for gas → Finally use app
-- ✅ **Your wallet:** Open app → Use fingerprint → Start using immediately
+- ✗ **Traditional:** Download MetaMask → Create seed phrase → Buy ETH for gas → Finally use app
+- ✓ **Your wallet:** Open app → Use fingerprint → Start using immediately
 
 **User benefits:**
 - 🚀 **Instant onboarding** - no complex setup
@@ -695,11 +695,11 @@ function WalletScreen() {
 
 ### What You've Accomplished
 
-✅ **Balance checking** - Users can see their SOL balance  
-✅ **Gasless sending** - Users can send money for free  
-✅ **QR code receiving** - Easy way to receive payments  
-✅ **Transaction history** - Users can see past activity  
-✅ **Test money integration** - Easy way to get started  
+✓ **Balance checking** - Users can see their SOL balance  
+✓ **Gasless sending** - Users can send money for free  
+✓ **QR code receiving** - Easy way to receive payments  
+✓ **Transaction history** - Users can see past activity  
+✓ **Test money integration** - Easy way to get started  
 
 ### Advanced Features to Add
 

@@ -124,12 +124,12 @@ export function OnboardingScreen({ onComplete }: OnboardingScreenProps) {
       await connect({
         redirectUrl: APP_SCHEME, // Deep link for callback
         onSuccess: (walletInfo) => {
-          console.log(`✅ Wallet ${type === 'create' ? 'created' : 'logged in'} successfully:`, walletInfo.smartWallet);
+          console.log(`✓ Wallet ${type === 'create' ? 'created' : 'logged in'} successfully:`, walletInfo.smartWallet);
           setActionType(null);
           onComplete(); // Notify parent component of completion
         },
         onFail: (error) => {
-          console.error(`❌ Wallet ${type} failed:`, error);
+          console.error(`✗ Wallet ${type} failed:`, error);
           setActionType(null);
         },
       });

@@ -7,8 +7,8 @@
 In this tutorial, you'll understand:
 - 🔐 How fingerprint/face ID login works for crypto wallets
 - 📱 Why this is better than traditional wallets
-- 🛠️ How to set up the basic wallet connection
-- ✅ How to test it on your phone
+- ⛯ How to set up the basic wallet connection
+- ✓ How to test it on your phone
 
 **Time needed:** 30 minutes  
 **Difficulty:** Beginner
@@ -16,18 +16,18 @@ In this tutorial, you'll understand:
 ## The Problem with Traditional Crypto Wallets
 
 **Traditional wallets are complicated:**
-- ❌ Users must download a separate wallet app (like MetaMask)
-- ❌ They need to write down 12-24 random words (seed phrase)
-- ❌ They must remember passwords
-- ❌ If they lose the seed phrase, they lose all their money
-- ❌ They need to buy cryptocurrency just to pay transaction fees
+- ✗ Users must download a separate wallet app (like MetaMask)
+- ✗ They need to write down 12-24 random words (seed phrase)
+- ✗ They must remember passwords
+- ✗ If they lose the seed phrase, they lose all their money
+- ✗ They need to buy cryptocurrency just to pay transaction fees
 
 **Your wallet will be different:**
-- ✅ Built directly into your app (no separate download)
-- ✅ Login with fingerprint or face ID
-- ✅ No seed phrases to remember or lose
-- ✅ Free transactions (no fees for users)
-- ✅ Works across all their devices automatically
+- ✓ Built directly into your app (no separate download)
+- ✓ Login with fingerprint or face ID
+- ✓ No seed phrases to remember or lose
+- ✓ Free transactions (no fees for users)
+- ✓ Works across all their devices automatically
 
 ## What Are Passkeys?
 
@@ -42,7 +42,7 @@ Password: MyPassword123!
 **Passkey login:**
 ```
 👆 Touch fingerprint sensor
-✅ Logged in!
+✓ Logged in!
 ```
 
 **How they work:**
@@ -104,11 +104,11 @@ function WalletScreen() {
     await connect({
       redirectUrl: 'keyless://home',  // Where to return after login
       onSuccess: (walletInfo) => {
-        console.log('✅ Wallet connected!');
+        console.log('✓ Wallet connected!');
         console.log('Wallet address:', walletInfo.smartWallet);
       },
       onFail: (error) => {
-        console.log('❌ Connection failed:', error);
+        console.log('✗ Connection failed:', error);
       }
     });
   };
@@ -123,7 +123,7 @@ function WalletScreen() {
       ) : (
         // Show wallet info if connected
         <View>
-          <Text>✅ Wallet Connected!</Text>
+          <Text>✓ Wallet Connected!</Text>
           <Text>Address: {smartWalletPubkey?.toString()}</Text>
         </View>
       )}
@@ -157,10 +157,10 @@ const walletInfo = {
 ```
 
 **The important part is `smartWallet`** - this is like a bank account number:
-- ✅ **Users can receive money** at this address
-- ✅ **Users can send money** from this address
-- ✅ **Only their fingerprint** can authorize transactions
-- ✅ **Works on all their devices** (iPhone, Android, etc.)
+- ✓ **Users can receive money** at this address
+- ✓ **Users can send money** from this address
+- ✓ **Only their fingerprint** can authorize transactions
+- ✓ **Works on all their devices** (iPhone, Android, etc.)
 
 ### Step 4: App Configuration
 
@@ -207,18 +207,18 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 5. **Note the wallet address** - this is your user's new wallet
 
 **What to expect:**
-- ✅ Browser opens to Lazorkit portal
-- ✅ Passkey prompt appears
-- ✅ Fingerprint/face ID works
-- ✅ Returns to your app
-- ✅ Shows wallet address
+- ✓ Browser opens to Lazorkit portal
+- ✓ Passkey prompt appears
+- ✓ Fingerprint/face ID works
+- ✓ Returns to your app
+- ✓ Shows wallet address
 
 ### Step 3: Test Persistence
 
 **Close and reopen the app:**
-- ✅ Should remember the connection
-- ✅ Should show wallet address immediately
-- ✅ No need to connect again
+- ✓ Should remember the connection
+- ✓ Should show wallet address immediately
+- ✓ No need to connect again
 
 **This is the magic of passkeys** - once created, they work automatically!
 
@@ -307,20 +307,20 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 
 ### What Users Don't Need to Worry About
 
-- ❌ **No seed phrases to lose**
-- ❌ **No passwords to remember**
-- ❌ **No separate apps to download**
-- ❌ **No complex backup procedures**
-- ❌ **No risk of phishing attacks**
+- ✗ **No seed phrases to lose**
+- ✗ **No passwords to remember**
+- ✗ **No separate apps to download**
+- ✗ **No complex backup procedures**
+- ✗ **No risk of phishing attacks**
 
 ## Next Steps
 
 ### What You've Accomplished
 
-✅ **Set up passkey authentication** - users can create wallets with fingerprint  
-✅ **Understood smart wallets** - how addresses are generated and managed  
-✅ **Tested the connection flow** - verified it works on real devices  
-✅ **Learned about security** - why this is safer than traditional wallets  
+✓ **Set up passkey authentication** - users can create wallets with fingerprint  
+✓ **Understood smart wallets** - how addresses are generated and managed  
+✓ **Tested the connection flow** - verified it works on real devices  
+✓ **Learned about security** - why this is safer than traditional wallets  
 
 ### What's Next
 
@@ -366,13 +366,13 @@ const showOnboarding = () => {
 
 **Before asking for help, check:**
 
-✅ **Testing on real device** (not emulator)  
-✅ **Fingerprint/face ID set up** on the device  
-✅ **Internet connection** working  
-✅ **App scheme configured** in app.json  
-✅ **Deep linking working** (can open app from browser)  
-✅ **All dependencies installed** (`bun install`)  
-✅ **App rebuilt** after configuration changes  
+✓ **Testing on real device** (not emulator)  
+✓ **Fingerprint/face ID set up** on the device  
+✓ **Internet connection** working  
+✓ **App scheme configured** in app.json  
+✓ **Deep linking working** (can open app from browser)  
+✓ **All dependencies installed** (`bun install`)  
+✓ **App rebuilt** after configuration changes  
 
 ## Resources
 

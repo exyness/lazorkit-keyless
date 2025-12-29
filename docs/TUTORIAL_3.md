@@ -15,7 +15,7 @@ New User Journey (Traditional):
 3. Must buy SOL on exchange
 4. Transfer to wallet
 5. Finally can use your app
-❌ 90% of users drop off
+✗ 90% of users drop off
 ```
 
 ## Lazorkit's Solution: Paymaster
@@ -25,7 +25,7 @@ New User Journey (Lazorkit):
 1. User wants to try your app
 2. Creates passkey with biometric
 3. Immediately starts using app
-✅ Seamless onboarding
+✓ Seamless onboarding
 ```
 
 ## How Paymaster Works
@@ -108,7 +108,7 @@ function GaslessSendScreen() {
         {
           redirectUrl: 'keyless://callback',
           onSuccess: (txSignature) => {
-            console.log('✅ Transaction successful:', txSignature);
+            console.log('✓ Transaction successful:', txSignature);
             Alert.alert(
               'Success! 🎉',
               `Transaction sent successfully!\n\nSignature: ${txSignature.slice(0, 8)}...`,
@@ -116,7 +116,7 @@ function GaslessSendScreen() {
             );
           },
           onFail: (error) => {
-            console.error('❌ Transaction failed:', error);
+            console.error('✗ Transaction failed:', error);
             Alert.alert('Transaction Failed', error.message || 'Unknown error');
           },
         }

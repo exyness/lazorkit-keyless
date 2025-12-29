@@ -1,8 +1,6 @@
 # Lazorkit Keyless Wallet - React Native Example
 
-**🏆 Bounty Submission: Complete React Native example demonstrating Lazorkit SDK integration for passkey-based Solana wallets with gasless transactions**
-
-## 🎯 Project Overview
+## Project Overview
 
 This repository provides a **production-ready example** of integrating Lazorkit SDK into a React Native mobile app. It demonstrates how to eliminate traditional crypto wallet friction by implementing:
 
@@ -13,7 +11,7 @@ This repository provides a **production-ready example** of integrating Lazorkit 
 
 **Perfect for:** Developers wanting to add crypto functionality to existing apps without forcing users to download separate wallet apps.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js 18+ and Bun package manager
@@ -62,7 +60,7 @@ The app is pre-configured for Solana Devnet testing:
 4. **Get test SOL** - use the built-in faucet integration
 5. **Try features** - send money, receive via QR codes, sign messages
 
-## 📚 Step-by-Step Tutorials
+## Step-by-Step Tutorials
 
 ### Tutorial 1: [Passkey-Based Wallet Creation](docs/TUTORIAL_1.md)
 Learn how to implement fingerprint/Face ID wallet creation that eliminates seed phrases:
@@ -92,7 +90,7 @@ Implement secure authentication without passwords:
 - Login systems using signed messages
 - Off-chain authentication patterns
 
-## 🏗️ Code Structure
+## Code Structure
 
 ```
 src/
@@ -107,7 +105,7 @@ src/
 └── components/             # Reusable UI components
 ```
 
-## 🔑 Key Features Demonstrated
+## Key Features Demonstrated
 
 ### 1. Passkey Authentication
 ```typescript
@@ -116,11 +114,11 @@ const handleCreateWallet = async (type: 'create' | 'login') => {
   await connect({
     redirectUrl: APP_SCHEME,
     onSuccess: (walletInfo) => {
-      console.log('✅ Wallet created:', walletInfo.smartWallet);
+      console.log('Wallet created:', walletInfo.smartWallet);
       onComplete();
     },
     onFail: (error) => {
-      console.error('❌ Wallet creation failed:', error);
+      console.error('Wallet creation failed:', error);
     },
   });
 };
@@ -139,8 +137,8 @@ const signature = await signAndSendTransaction(
   },
   {
     redirectUrl: APP_SCHEME,
-    onSuccess: (sig) => console.log('✅ Transaction sent:', sig),
-    onFail: (error) => console.error('❌ Transaction failed:', error),
+    onSuccess: (sig) => console.log('Transaction sent:', sig),
+    onFail: (error) => console.error('Transaction failed:', error),
   }
 );
 ```
@@ -155,7 +153,7 @@ const connection = new Connection(RPC_URL, 'confirmed');
 const balance = await connection.getBalance(smartWalletPubkey);
 ```
 
-## 🎨 UI/UX Highlights
+## UI/UX Highlights
 
 - **Glass morphism design** - Modern, clean interface
 - **Smooth animations** - Page transitions and loading states
@@ -163,7 +161,7 @@ const balance = await connection.getBalance(smartWalletPubkey);
 - **QR code generation** - Easy payment receiving
 - **Transaction feedback** - Clear success/error states
 
-## 🧪 Testing & Development
+## Testing & Development
 
 ### Testing on Physical Devices
 ```bash
@@ -182,13 +180,13 @@ The app includes integration with Solana faucet for easy testing:
 4. Receive 1-2 test SOL in ~30 seconds
 
 ### Common Testing Scenarios
-- ✅ First-time user onboarding flow
-- ✅ Returning user automatic connection
-- ✅ Gasless transaction execution
-- ✅ Cross-device passkey sync
-- ✅ Network error handling
+- First-time user onboarding flow
+- Returning user automatic connection
+- Gasless transaction execution
+- Cross-device passkey sync
+- Network error handling
 
-## 🔒 Security Features
+## Security Features
 
 - **Hardware-backed passkeys** - Keys stored in secure enclave
 - **No seed phrase management** - Eliminates user error risk
@@ -196,7 +194,7 @@ The app includes integration with Solana faucet for easy testing:
 - **Input validation** - Address and amount verification
 - **Rate limiting** - Prevents transaction spam
 
-## 🌐 Live Demo
+## Live Demo
 
 **Devnet Demo:** [Download APK](https://github.com/exyness/lazorkit-keyless-wallet/releases)
 
@@ -207,7 +205,7 @@ The app includes integration with Solana faucet for easy testing:
 4. Send gasless transactions to friends
 5. Experience the future of crypto UX!
 
-## 📖 Integration Guide
+## Integration Guide
 
 ### Adding to Existing App
 
@@ -243,67 +241,7 @@ function YourComponent() {
 }
 ```
 
-## 🏆 Bounty Submission Details
-
-**Submission for:** Lazorkit Bounty - "Integrate Passkey technology with Lazorkit to 10x Solana UX"  
-**Category:** React Native mobile onboarding with biometric login  
-**Framework:** React Native (Expo)  
-**Author:** exyness  
-
-### ✅ Requirements Fulfilled
-
-**Working Example Repo:**
-- ✅ React Native (Expo) framework
-- ✅ Clean folder structure with modular components
-- ✅ Well-documented code with comprehensive comments
-- ✅ Production-ready error handling and validation
-
-**Quick-Start Guide:**
-- ✅ Complete project overview and setup instructions
-- ✅ SDK installation and configuration guide
-- ✅ Environment setup for Android development
-- ✅ Step-by-step instructions to run the example
-
-**Step-by-Step Tutorials (4 total):**
-- ✅ Tutorial 1: Passkey-based wallet creation
-- ✅ Tutorial 2: Gasless transactions and wallet features
-- ✅ Tutorial 3: Advanced gasless transaction patterns
-- ✅ Tutorial 4: Message signing and authentication
-
-**Live Demo:**
-- ✅ Deployed on Solana Devnet with working frontend
-- ✅ Simple, functional UI focused on integration
-- ✅ Ready-to-install APK for immediate testing
-
-### 🎯 Key Lazorkit Features Demonstrated
-
-1. **Passkey Authentication Flow** - Complete biometric wallet creation
-2. **Gasless Smart Wallet Transactions** - SOL transfers without gas fees
-3. **Message Signing** - Cryptographic authentication with passkeys
-4. **Session Persistence** - Cross-device wallet access
-5. **Deep Linking Integration** - Proper WebAuthn callback handling
-
-### 📊 Judging Criteria Alignment
-
-**Clarity & Usefulness (40%):**
-- Comprehensive README with setup instructions
-- 4 detailed step-by-step tutorials
-- Extensive code comments for learning
-- Troubleshooting guide and best practices
-
-**SDK Integration Quality (30%):**
-- Complete passkey implementation with WebAuthn
-- Full gasless transaction system with paymaster
-- Message signing and authentication patterns
-- Production-ready error handling and validation
-
-**Code Structure & Reusability (30%):**
-- Modular React Native architecture
-- TypeScript for type safety
-- Easy to clone, modify, and extend
-- Complete build system with APK output
-
-## 🤝 Contributing
+## Contributing
 
 This example is designed to be a learning resource. Feel free to:
 - Fork and customize for your use case
@@ -311,15 +249,15 @@ This example is designed to be a learning resource. Feel free to:
 - Propose improvements to the tutorials
 - Share your own integration examples
 
-## 📞 Support & Resources
+## Support & Resources
 
 - **Lazorkit Docs:** [docs.lazorkit.com](https://docs.lazorkit.com/)
 - **Telegram Community:** [t.me/lazorkit](https://t.me/lazorkit)
 - **GitHub Repository:** [github.com/lazor-kit/lazor-kit](https://github.com/lazor-kit/lazor-kit)
 
-## 📄 License
+## License
 
-MIT License - feel free to use this code in your own projects.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -328,4 +266,4 @@ MIT License - feel free to use this code in your own projects.
 **Lazorkit SDK:** Latest  
 **Framework:** React Native (Expo)  
 
-*This example demonstrates the future of crypto UX - where users never need to download wallet apps, remember seed phrases, or pay transaction fees.*g and integration. The future of Solana UX starts here.** 🚀
+*This example demonstrates the future of crypto UX - where users never need to download wallet apps, remember seed phrases, or pay transaction fees.*
