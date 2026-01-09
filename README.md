@@ -1,5 +1,7 @@
 # Lazorkit Keyless Wallet - React Native Example
 
+![App Demo](assets/cover.png)
+
 ## Project Overview
 
 This repository provides a **production-ready example** of integrating Lazorkit SDK into a React Native mobile app. It demonstrates how to eliminate traditional crypto wallet friction by implementing:
