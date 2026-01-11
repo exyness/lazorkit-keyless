@@ -13,6 +13,18 @@ This repository provides a **production-ready example** of integrating Lazorkit 
 
 **Perfect for:** Developers wanting to add crypto functionality to existing apps without forcing users to download separate wallet apps.
 
+## 🚀 Try the Live Demo
+
+**[📲 Download APK](https://github.com/exyness/lazorkit-keyless/releases/latest/download/lazorkit-keyless-wallet-v1.0.0.apk)**
+
+Experience the app instantly on your Android device:
+1. Download and install the APK
+2. Create wallet with your fingerprint  
+3. Get free test SOL from built-in faucet
+4. Send gasless transactions to friends
+
+*Requires Android device with biometric authentication*
+
 ## Quick Start
 
 ### Prerequisites
@@ -24,8 +36,8 @@ This repository provides a **production-ready example** of integrating Lazorkit 
 
 ```bash
 # Clone the repository
-git clone https://github.com/exyness/lazorkit-keyless-wallet.git
-cd lazorkit-keyless-wallet
+git clone https://github.com/exyness/lazorkit-keyless.git
+cd lazorkit-keyless
 
 # Install dependencies
 bun install
